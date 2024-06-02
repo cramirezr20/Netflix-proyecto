@@ -1,0 +1,161 @@
+@font-face {
+    font-family: Netflix;
+    src: url('../../fonts/AvenirNextLTPro-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: Netflix;
+    src: url('../../fonts/AvenirNextLTPro-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body { 
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Netflix;
+}
+a{
+    color:white;
+    text-decoration: none;  
+}
+.header {
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to bottom, black 0%,black 60%,transparent 100%);
+}
+
+.navigation-item {
+    list-style: none;
+
+    text-align: center;
+
+}
+.navigation {
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-auto-columns: 100px;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+
+.featured {
+    margin-top: -200px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.featured-details{
+    /*border:1px solid red;*/
+    position:absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    align-items: center;
+    background-image: linear-gradient(to top, black 0%, black 20%, transparent 100%);
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tags{
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.tag::before{
+    content: '•';
+    margin-right: 15px;
+    position: relative;
+    top: 1px;
+}
+
+.tag:first-child::before{
+    display: none;
+}
+
+.featured-actions {
+height:100px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+padding-bottom: 2em;
+}
+
+.button{
+    border: 1px solid blue;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 2px 1em;
+    border-radius: 3px;
+    border: none;
+}
+
+.button::before{
+
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+}
+
+.button-secondary{
+background: none;
+color: white;
+font-size: 1.1em;
+min-width: 100px;
+cursor: pointer;
+border: none;
+}
+
+.button-secondary::before{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin:auto;
+}
+
+.icon-plus::before{
+     background: url('../../images/plus.svg');
+}
+.icon-play::before{
+    background: url('../../images/play.svg');
+}
+.icon-info::before{
+    background: url('../../images/info.svg');
+}
+
+.footer{
+    border:1px solid red;
+    position:fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+}
+
+.list-content{
+
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.list-item{
+    display: inline-block;
+}
